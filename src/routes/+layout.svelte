@@ -3,6 +3,7 @@
 
     import Header from "./header.svelte";
     import Footer from "./footer.svelte";
+    import "./styles.css"
 
 
 </script>
