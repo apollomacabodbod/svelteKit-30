@@ -1,10 +1,13 @@
 
+<script>
 
-<header>
+    import Header from "./header.svelte";
 
-    <h1>Level Up Blog</h1>
 
-</header>
+</script>
+
+
+<Header />
 
 
 <main>
