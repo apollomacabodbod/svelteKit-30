@@ -2,6 +2,7 @@
 <script>
 
     import Header from "./header.svelte";
+    import Footer from "./footer.svelte";
 
 
 </script>
@@ -17,5 +18,6 @@
 </main>
 
 
+<Footer />
 
-<footer>Level Up Tutorials</footer>
+
