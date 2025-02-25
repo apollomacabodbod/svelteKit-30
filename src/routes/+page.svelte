@@ -3,6 +3,7 @@
 <script>
 
  import Test from '$lib/Test.svelte'
+ import '$db/Start'
 
 </script>
 
