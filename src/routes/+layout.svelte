@@ -7,3 +7,6 @@
 </header>
 
 <slot />
+
+
+<footer>Level Up Tutorials</footer>
