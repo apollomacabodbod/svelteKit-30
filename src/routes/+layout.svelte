@@ -5,6 +5,10 @@
     import Footer from "./footer.svelte";
     import "./styles.css"
 
+    export let data;
+
+    $: ({ all_episodes } = data)
+
 
 </script>
 
