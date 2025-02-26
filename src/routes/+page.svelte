@@ -26,7 +26,9 @@
      <div id="{episode.slug}">
 
 
-      <p>{episode.title}</p>
+      <!-- <p>{episode.title}</p> -->
+
+      <a href={`/show/${episode.number}`}>{episode.title}</a>
 
 
      </div>
