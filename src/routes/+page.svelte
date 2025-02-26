@@ -7,7 +7,7 @@
  export let data;
 
 
-   $: ({ latest_episode , all_episodes } = data)
+   $: ({ latest_episode  } = data)
 
 </script>
 
@@ -19,23 +19,6 @@
 
 
 
-<div>
 
-    {#each all_episodes as episode }
-
-     <div id="{episode.slug}">
-
-
-      <!-- <p>{episode.title}</p> -->
-
-      <a href={`/show/${episode.number}`}>{episode.title}</a>
-
-
-     </div>
-        
-    {/each}
-
-    
-</div>
 
 <Test/>
