@@ -1,8 +1,9 @@
 
-
+import { auth } from '$db/fake_auth'
 
 export async function handle({ event, resolve }){
-    console.log("event", event)
+    const user = auth() 
+    event.locals.user = user;
     
     return resolve(event)
 
