@@ -1,2 +1,8 @@
 
-<footer>Level Up Tutorials</footer>
+<footer>
+
+    <a href="/contact">Contact</a>
+
+    <p>Level up Tutorials</p>
+
+</footer>
