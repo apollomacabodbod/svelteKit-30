@@ -4,7 +4,24 @@
 <script>
 
     import { enhance } from "$app/forms";
+    export let form;
+
+    $: console.log("form", form)
 </script>
+
+
+{#if form?.error_message}
+<p class="message">
+    {form.error_message}
+</p>
+{/if}
+
+
+{#if form?.message}
+
+<p>{form.message}</p>
+
+{:else}
 
 <form  use:enhance method="POST">
 
@@ -23,6 +40,14 @@
     <button type="submit">Send Email</button>
 
 </form>
+
+{/if}
+
+
+
+
+
+
 
 <style>
     form {

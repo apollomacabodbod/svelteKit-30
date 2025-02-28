@@ -4,7 +4,7 @@ import { error, redirect } from '@sveltejs/kit';
 export async function load({ fetch, params , setHeaders , locals }){
     console.log("locals: ", locals)
 
-    if(!locals?.user?.id) throw redirect(307, '/')
+    // if(!locals?.user?.id) throw redirect(307, '/')
 
     const res = await fetch(`https://syntax.fm/api/shows/${params.num}`)
     const data = await res.json();

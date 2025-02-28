@@ -1,7 +1,7 @@
 
-import { auth } from '$db/fake_auth'
-import { sequence } from '@sveltejs/kit/hooks'
 
+import { sequence } from '@sveltejs/kit/hooks'
+import { auth } from '$db/fake_auth'
 
 
 async function logger({ event, resolve}){
@@ -17,7 +17,7 @@ async function logger({ event, resolve}){
 
 function authorize( { event, resolve }){
     const user = auth()
-    // event.locals.user = user
+    event.locals.user = user
     return resolve(event)
 }
 
