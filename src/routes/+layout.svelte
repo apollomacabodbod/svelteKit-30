@@ -1,6 +1,10 @@
 
 <script>
 
+     import { env } from "$env/dynamic/public";
+     console.log('env', env)
+
+
     import { browser, building, dev, version } from "$app/environment";
     import { navigating } from "$app/stores";
     import Header from "./header.svelte";
