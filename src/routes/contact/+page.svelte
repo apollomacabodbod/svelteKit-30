@@ -2,11 +2,53 @@
 
 
 <script>
-
+ 
+    import { invalidateAll } from "$app/navigation";
+    import { applyAction , deserialize } from "$app/forms";
     import { enhance } from "$app/forms";
     export let form;
 
     $: console.log("form", form)
+
+
+
+    async function handleForm(event){
+
+        // this = form element
+  
+         const data = new FormData(this)
+         const res = await fetch(this.action,{
+            method: 'POST',
+            body: data
+         })
+
+
+         //get data by deserializing it
+         const result = deserialize(await res.text())
+
+
+
+         //see if it was success,
+         // if success, reload all loaded data
+
+         if(result.type === "success"){
+
+
+            //reloads all data
+
+            await invalidateAll()
+
+         }
+
+
+         //  populating form
+         //will redirect if thrown redirect in action
+         // show error page if thrown error
+          applyAction(result);
+
+    }
+
+
 </script>
 
 
@@ -23,7 +65,8 @@
 
 {:else}
 
-<form  use:enhance={({ form, data , action ,cancel }) => {
+
+<!-- <form  use:enhance={({ form, data , action ,cancel }) => {
 
     // form - form element
     // data - formData object
@@ -41,10 +84,17 @@
 
 }} 
 
-action="?/email"
-method="POST">
+action="/contact?/email"
+method="POST"> -->
 
-    <label>
+
+<form on:submit|preventDefault={handleForm} action="/contact?/email">
+
+
+
+    <!-- Action = route + ?/ + action_name -->
+
+<label>
         Name: <input type="text" required name="name" id="name" />
     </label>
 
