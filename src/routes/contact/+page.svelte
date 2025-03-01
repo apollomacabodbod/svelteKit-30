@@ -39,7 +39,10 @@
 
     }
 
-}} method="POST">
+}} 
+
+action="?/email"
+method="POST">
 
     <label>
         Name: <input type="text" required name="name" id="name" />
