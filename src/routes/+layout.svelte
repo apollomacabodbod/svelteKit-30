@@ -4,8 +4,6 @@
      import { env } from "$env/dynamic/public";
      console.log('env', env)
 
-     import { PUBLIC_LUT_PUB_KEY } from "$env/static/public";
-     console.log('PUBLIC_LUT_PUB_KEY ', PUBLIC_LUT_PUB_KEY)
 
     import { browser, building, dev, version } from "$app/environment";
     import { navigating } from "$app/stores";
