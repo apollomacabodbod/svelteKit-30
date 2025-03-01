@@ -1,6 +1,7 @@
 
 <script>
 
+    import { browser, building, dev, version } from "$app/environment";
     import { navigating } from "$app/stores";
     import Header from "./header.svelte";
     import Footer from "./footer.svelte";
@@ -10,6 +11,14 @@
     export let data;
 
     $: ({ all_episodes } = data)
+
+
+
+    console.log(browser,building,dev,version)
+
+    // browser  ->  boolean, if app is running in browser
+    // building -> boolean, true , if currently building in production..
+    // dev ->  boolean, if in development mode 
 
 
 </script>
