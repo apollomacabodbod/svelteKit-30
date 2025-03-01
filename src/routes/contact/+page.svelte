@@ -23,7 +23,26 @@
 
 {:else}
 
-<form  use:enhance method="POST">
+<form  use:enhance={({ form, data , action ,cancel }) => {
+
+    // form - form element
+    // data - formData object
+    // action - url form posts to
+    // cancel - cancels form
+
+    return ({ result , update }) => {
+
+        update();
+
+     // result - 'ActionResult'
+     // update() -> runs all of the default use:enhance
+
+    }
+
+}} 
+
+action="?/email"
+method="POST">
 
     <label>
         Name: <input type="text" required name="name" id="name" />
