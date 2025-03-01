@@ -80,7 +80,7 @@
 <Footer />
 
 
-<style>
+<style lang="postcss">
 
   
 
