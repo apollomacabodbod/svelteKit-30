@@ -1,6 +1,7 @@
 
 <script>
 
+    import { navigating } from "$app/stores";
     import Header from "./header.svelte";
     import Footer from "./footer.svelte";
     import "./styles.css"
@@ -12,6 +13,16 @@
 
 
 </script>
+
+
+{#if !!$navigating}
+
+<div class="loading">
+
+    Loading...
+</div>
+
+{/if}
 
 
 <Header />
@@ -42,6 +53,8 @@
 
 <style>
 
+  
+
     main {
         display: grid;
         grid-template-columns: 1fr 300px;
@@ -51,6 +64,20 @@
     aside {
         order:-1;
     }
+
+
+    .loading{
+
+        position: fixed;
+        inset: 0;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        background-color: blue;
+        color:white;
+    }
+
+
 </style>
 
 
