@@ -95,16 +95,6 @@
     }
 
 
-    .loading{
-
-        position: fixed;
-        inset: 0;
-        display: flex;
-        justify-content: center;
-        align-items: center;
-        background-color: blue;
-        color:white;
-    }
 
 
 </style>
