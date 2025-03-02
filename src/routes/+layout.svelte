@@ -14,6 +14,8 @@
       // preloadData -> load data from load functions for given routes
 
      import { env } from "$env/dynamic/public";
+     import { PUBLIC_LUT_PUB_KEY } from '$env/static/public'
+     console.log('PUBLIC_LUT_PUB_KEY', PUBLIC_LUT_PUB_KEY)
      console.log('env', env)
 
 
