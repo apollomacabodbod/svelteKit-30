@@ -42,14 +42,14 @@
 </script>
 
 
-{#if !!$navigating}
+<!-- {#if !!$navigating}
 
 <div class="loading">
 
     Loading...
 </div>
 
-{/if}
+{/if} -->
 
 
 <Header />
