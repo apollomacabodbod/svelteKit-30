@@ -42,14 +42,14 @@
 </script>
 
 
-{#if !!$navigating}
+<!-- {#if !!$navigating}
 
 <div class="loading">
 
     Loading...
 </div>
 
-{/if}
+{/if} -->
 
 
 <Header />
@@ -95,16 +95,6 @@
     }
 
 
-    .loading{
-
-        position: fixed;
-        inset: 0;
-        display: flex;
-        justify-content: center;
-        align-items: center;
-        background-color: blue;
-        color:white;
-    }
 
 
 </style>
